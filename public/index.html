@@ -13,9 +13,11 @@
     <script>
          const socket = io();
          const img = document.getElementById('play');
+      
          socket.on('stream', video => {
             img.src = video;
-         })
+         });
+
     </script>
 </body>
 </html>

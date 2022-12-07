@@ -10,6 +10,7 @@
 <body>
     <button id="btn">Emitir</button>
     <h1>Streamin Emisor</h1>
+    <div id="user"></div>
     <video src="" id="video" style="width: 800px; height: 600px;" autoplay="true"></video>
     <canvas id="preview"></canvas>
     <div id="status"></div>
@@ -61,7 +62,17 @@
 
         });
 
+        // socket.emit('user', data => {
+            
+        //     let p = document.createElement('p');
+        //     p.textContent += data;
+        //     document.getElementById('user').appendChild(p)
+        //     console.log(p);
+        // });
         
+        socket.on('user', data => {
+            console.log(data);
+        })
 
     </script>
 
