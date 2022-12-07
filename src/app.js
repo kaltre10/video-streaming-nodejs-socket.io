@@ -9,8 +9,8 @@ const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
 const httpServer = (0, http_1.createServer)(app);
 const io = new socket_io_1.Server(httpServer);
-app.get('/', (req, res) => res.sendFile(path_1.default.join(__dirname, '../public/index.html')));
-app.get('/dashboard', (req, res) => res.sendFile(path_1.default.join(__dirname, '../public/dashboard.html')));
+app.get('/', (req, res) => res.sendFile(path_1.default.join(__dirname, './public/index.html')));
+app.get('/dashboard', (req, res) => res.sendFile(path_1.default.join(__dirname, './public/dashboard.html')));
 io.on("connection", (socket) => {
     // console.log('nuevo cliente');
     socket.emit('user', 'Nuevo Espectador');
