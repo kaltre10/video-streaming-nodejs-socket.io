@@ -3,10 +3,6 @@
       {
         "src": "/",
         "dest": "/src/index.js"
-      },
-      {
-        "src": "/dashboard",
-        "dest": "/src/dashboard.js"
       }
     ]
   }
